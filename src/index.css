@@ -1,0 +1,156 @@
+/* ── GOOGLE FONTS ───────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ── DESIGN TOKENS ──────────────────────────────────────────── */
+:root {
+  --font: 'Plus Jakarta Sans', sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+  --max: 1160px;
+  --radius: 16px;
+  --radius-sm: 10px;
+  --radius-xs: 6px;
+
+  /* LIGHT MODE — warm white with blue-indigo accents */
+  --bg:           #FAFBFF;
+  --bg-card:      #FFFFFF;
+  --bg-muted:     #F0F4FF;
+  --bg-muted2:    #E8EEFF;
+  --border:       rgba(79, 107, 187, 0.12);
+  --border-md:    rgba(79, 107, 187, 0.22);
+  --border-strong:rgba(79, 107, 187, 0.38);
+  --txt:          #0C1445;
+  --txt-2:        #374799;
+  --txt-3:        #7B8FCC;
+  --txt-4:        #A0AFDD;
+  --accent:       #3B5BF5;
+  --accent-2:     #6C47FF;
+  --accent-lt:    #EEF2FF;
+  --accent-dk:    #2543D6;
+  --signal:       #06B6D4;
+  --signal-lt:    #ECFEFF;
+  --success:      #10B981;
+  --warn:         #F59E0B;
+  --danger:       #EF4444;
+  --tag-bg:       #EEF2FF;
+  --tag-txt:      #3B5BF5;
+  --tag-border:   rgba(59,91,245,0.18);
+  --hero-grad:    linear-gradient(135deg, #EEF2FF 0%, #F0F9FF 40%, #F5F0FF 100%);
+  --card-shadow:  0 2px 12px rgba(59,91,245,0.08), 0 1px 3px rgba(0,0,0,0.05);
+  --card-shadow-hover: 0 12px 40px rgba(59,91,245,0.16), 0 4px 12px rgba(0,0,0,0.08);
+  --glow:         rgba(59,91,245,0.15);
+}
+
+[data-theme="dark"] {
+  --bg:           #060B18;
+  --bg-card:      #0D1525;
+  --bg-muted:     #111E35;
+  --bg-muted2:    #162240;
+  --border:       rgba(100,140,255,0.10);
+  --border-md:    rgba(100,140,255,0.18);
+  --border-strong:rgba(100,140,255,0.32);
+  --txt:          #E8EEFF;
+  --txt-2:        #94A8E0;
+  --txt-3:        #5B6FAA;
+  --txt-4:        #374166;
+  --accent:       #4F72FF;
+  --accent-2:     #7C5CFF;
+  --accent-lt:    #131F45;
+  --accent-dk:    #7090FF;
+  --signal:       #22D3EE;
+  --signal-lt:    #0A2535;
+  --success:      #34D399;
+  --warn:         #FBBF24;
+  --danger:       #F87171;
+  --tag-bg:       #131F45;
+  --tag-txt:      #7090FF;
+  --tag-border:   rgba(79,114,255,0.22);
+  --hero-grad:    linear-gradient(135deg, #060B18 0%, #0B1530 50%, #0D102A 100%);
+  --card-shadow:  0 2px 12px rgba(0,0,0,0.4);
+  --card-shadow-hover: 0 16px 48px rgba(0,0,0,0.6), 0 0 0 1px rgba(100,140,255,0.15);
+  --glow:         rgba(79,114,255,0.12);
+}
+
+/* ── RESET ──────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--txt);
+  -webkit-font-smoothing: antialiased;
+  transition: background 0.35s ease, color 0.35s ease;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+button { font-family: inherit; cursor: pointer; border: none; background: none; }
+ul { list-style: none; }
+
+/* ── SCROLLBAR ──────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-md); border-radius: 8px; }
+::-webkit-scrollbar-thumb:hover { background: var(--border-strong); }
+::selection { background: var(--accent); color: #fff; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+/* ── LAYOUT ─────────────────────────────────────────────────── */
+.container { max-width: var(--max); margin: 0 auto; padding: 0 32px; }
+.section { padding: 110px 0; }
+
+/* ── TYPOGRAPHY ─────────────────────────────────────────────── */
+.section-label {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: var(--mono); font-size: 11.5px;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--accent); margin-bottom: 14px;
+}
+.section-label::before {
+  content: ""; width: 24px; height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  border-radius: 2px; display: block;
+}
+.section-title {
+  font-size: clamp(2rem, 4vw, 3rem); font-weight: 800;
+  letter-spacing: -0.03em; color: var(--txt); line-height: 1.08;
+  margin-bottom: 16px;
+}
+.section-title span { 
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.section-sub { font-size: 17px; color: var(--txt-2); line-height: 1.7; max-width: 560px; }
+
+/* ── CHIPS ──────────────────────────────────────────────────── */
+.chip {
+  display: inline-flex; align-items: center;
+  font-family: var(--mono); font-size: 11px; font-weight: 500;
+  background: var(--tag-bg); color: var(--tag-txt);
+  border: 1px solid var(--tag-border);
+  border-radius: 6px; padding: 4px 9px;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+
+/* ── BUTTONS ────────────────────────────────────────────────── */
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 15px; font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  color: #fff; padding: 14px 28px; border-radius: var(--radius-sm);
+  transition: transform 0.15s, box-shadow 0.15s; box-shadow: 0 4px 16px var(--glow);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px var(--glow); }
+.btn-outline {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 15px; font-weight: 600; color: var(--txt);
+  border: 1.5px solid var(--border-md);
+  padding: 14px 28px; border-radius: var(--radius-sm);
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-lt); }
