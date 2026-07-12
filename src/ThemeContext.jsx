@@ -5,7 +5,6 @@ const ThemeCtx = createContext();
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
     if (typeof window !== "undefined") {
-      // Default to dark mode unless user has explicitly chosen light before
       return localStorage.getItem("theme") || "dark";
     }
     return "dark";
