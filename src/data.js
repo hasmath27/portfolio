@@ -136,7 +136,7 @@ export const projects = [
   {
    id: "smart-street-light",
    title: "Smart Street Light Control & Monitoring System",
-   category: "IoT · Flutter",
+   category: "IoT · Cloud · Mobile",
    bullets: [
     "Built an IoT-based smart street light system using ESP32 and LDR sensor with real-time light intensity monitoring and automatic light control",
     "Developed a cross-platform Flutter mobile app with Supabase backend for real-time data visualization and remote monitoring"
