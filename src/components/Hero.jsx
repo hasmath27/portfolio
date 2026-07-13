@@ -53,7 +53,7 @@ export default function Hero() {
           </h1>
 
           <div className="hero-role-row">
-            <span className="hero-role-static">I build</span>
+            <span className="hero-role-static"></span>
             <span
               className="hero-role-dynamic"
               style={{ opacity: fade ? 1 : 0, transform: fade ? "translateY(0)" : "translateY(-8px)" }}

@@ -147,7 +147,7 @@ export default function Projects() {
         <p className="section-label">Work</p>
         <h2 className="section-title">My Projects</h2>
         <p className="section-sub" style={{marginBottom: "44px"}}>
-          8 projects across mobile, cloud, IoT, machine learning, UI/UX and web.
+          9 projects across mobile, cloud, IoT, machine learning, UI/UX and web.
         </p>
 
         {/* Filters */}

@@ -2,7 +2,7 @@ export const profile = {
   name:        "Mohamed Nilar Fathima Hasmath Nifa",
   shortName:   "Nifa",
   role:        "Software Engineer",
-  specialties: ["Mobile Developer", "Cloud & IoT Systems", "Full-Stack Developer", "UI/UX Designer"],
+  specialties: ["Problem Solver", "Creative Thinker", "Mobile Developer", "Full-Stack Developer", "UI/UX Designer"],
   about:
     "I'm final-year Software Technologies student at South Eastern University of Sri Lanka. I build across the full stack - mobile apps, cloud systems, IoT solutions, and UI/UX design. I care about writing clean code, solving real problems, and delivering things that actually work end to end.",
   about2:
@@ -16,7 +16,7 @@ export const profile = {
 };
 
 export const stats = [
-  { value: "8+", label: "Projects" },
+  { value: "9+", label: "Projects" },
   { value: "8+",  label: "Tech stacks" },
   { value: "2+",  label: "Years building" },
 ];
@@ -133,6 +133,20 @@ export const projects = [
     featured: false,
     articleLabel: "Read on Medium ↗",
   },
+  {
+   id: "smart-street-light",
+   title: "Smart Street Light Control & Monitoring System",
+   category: "IoT · Flutter",
+   bullets: [
+    "Built an IoT-based smart street light system using ESP32 and LDR sensor with real-time light intensity monitoring and automatic light control",
+    "Developed a cross-platform Flutter mobile app with Supabase backend for real-time data visualization and remote monitoring"
+  ],
+   stack: ["ESP32", "C++", "Flutter", "Dart", "Supabase"],
+   github: "https://github.com/hasmath27/Smart_Street_Light_App.git",
+   live: "",
+   image: "/projects/smart-street-light.png",
+   featured: true
+}
 ];
 
 export const skillGroups = [
@@ -307,7 +321,7 @@ export const certificates = [
 ];
 
 export const education = {
-  degree:      "B.Sc. in Information & Communication Technology",
+  degree:      "BICT(Hons) in Software Technologies",
   institution: "South Eastern University of Sri Lanka",
   location:    "Sri Lanka",
   period:      "Expected 2026",
