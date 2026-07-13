@@ -144,7 +144,7 @@ export const projects = [
    stack: ["ESP32", "C++", "Flutter", "Dart", "Supabase"],
    github: "https://github.com/hasmath27/Smart_Street_Light_App.git",
    live: "",
-   image: "/projects/smart-street-light.png",
+   image: "/projects/smart-street.png",
    featured: true
 }
 ];
