@@ -35,7 +35,7 @@ export default function Footer() {
             {profile.name}
           </p>
           <p className="footer-note">
-            © 2026 Nifa · Crafted with curiosity, code & coffee ☕
+            © 2026 Nifa | Code. Create. Innovate. | All rights reserved.
           </p>
           <div className="footer-links">
             <a href={profile.github}   target="_blank" rel="noreferrer">GitHub</a>
